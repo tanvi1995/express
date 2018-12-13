@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Profile</title>
+        
+    </head>
+    <body>
+        <% include partials/navigation.ejs %>
+       <h1>Profile Page !!</h1>
+       <p>Welcome to the profile of <%= personName %></p>
+        <ul>
+            <li>Age: <%= data.age %></li>
+            <li>Location: <%= data.location %></li>
+           
+        </ul>
+        <h2>Hobbies</h2>
+        <ol>
+            <% data.hobbies.forEach(function(hob){ %>
+                <li><%= hob %></li>
+
+            <% }) %>
+        </ol>
+        
+    </body>
+</html>
